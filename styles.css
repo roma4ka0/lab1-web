@@ -1,0 +1,335 @@
+/* БАЗА */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #f5f5f5;
+  color: #212121;
+}
+
+/* СКИП-ЛІНК */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: 8px 12px;
+  background: #1976d2;
+  color: #fff;
+}
+
+.skip-link:focus {
+  left: 8px;
+}
+
+/* СТРУКТУРА СТОРІНКИ */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page__header,
+.page__main,
+.page__footer {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* HEADER + NAV */
+.site-header {
+  background-color: #1976d2;
+  color: #fff;
+  padding: 16px 24px;
+}
+
+.site-header__title {
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.site-header__nav {
+  margin-bottom: -8px;
+}
+
+.main-nav__list {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+
+.main-nav__link {
+  color: #e3f2fd;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.main-nav__link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main-nav__link--active {
+  background-color: #fff;
+  color: #1976d2;
+}
+
+/* MAIN */
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+/* Для сторінок без сайдбару (about, contacts) можна зробити одну колонку */
+.main__about,
+.main__contacts {
+  grid-column: 1 / -1;
+}
+
+/* NEWS */
+.news__header {
+  margin-bottom: 12px;
+}
+
+.news__title {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.news__lead {
+  color: #555;
+}
+
+.news__figure {
+  margin: 12px 0;
+}
+
+.news__image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.news__caption {
+  font-size: 14px;
+  color: #555;
+}
+
+.news__text {
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+/* SERVICES */
+.services__title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.services__list {
+  padding-left: 16px;
+}
+
+.services__item + .services__item {
+  margin-top: 4px;
+}
+
+/* PRICES (ТАБЛИЦЯ) */
+.prices__title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.prices__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.prices__cell {
+  border: 1px solid #bdbdbd;
+  padding: 6px 8px;
+}
+
+.prices__cell--head {
+  background-color: #e3f2fd;
+  font-weight: 600;
+}
+
+/* SIDEBAR */
+.main__sidebar {
+  background-color: #e8f5e9;
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+
+.useful-links__title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.useful-links__item + .useful-links__item {
+  margin-top: 4px;
+}
+
+.useful-links__link {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.useful-links__link:hover {
+  text-decoration: underline;
+}
+
+/* ABOUT */
+.about__header {
+  margin-bottom: 16px;
+}
+
+.about__title {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.about__intro {
+  color: #555;
+}
+
+.about__section + .about__section {
+  margin-top: 16px;
+}
+
+.about__subtitle {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.about__list {
+  padding-left: 16px;
+}
+
+.about__item + .about__item {
+  margin-top: 4px;
+}
+
+/* CONTACTS */
+.contacts__title {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.contact-form {
+  background-color: #fafafa;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.contact-form__field {
+  margin-bottom: 12px;
+}
+
+.contact-form__label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.contact-form__input,
+.contact-form__textarea {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  outline: 2px solid #1976d2;
+  outline-offset: 1px;
+}
+
+.contact-form__button {
+  border: none;
+  padding: 8px 16px;
+  background-color: #1976d2;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form__button:hover {
+  background-color: #14589b;
+}
+
+.contacts__divider {
+  margin: 16px 0;
+}
+
+.contacts__subtitle {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.contacts__text + .contacts__text {
+  margin-top: 4px;
+}
+
+.contacts__social {
+  margin-top: 12px;
+}
+
+.contacts__social-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contacts__social-item + .contacts__social-item {
+  margin-top: 4px;
+}
+
+.contacts__social-link {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.contacts__social-link:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+.site-footer {
+  margin-top: auto;
+  background-color: #212121;
+  color: #fff;
+  padding: 12px 24px;
+  text-align: center;
+}
+
+.site-footer__text + .site-footer__text {
+  margin-top: 4px;
+}

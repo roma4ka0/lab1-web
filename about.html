@@ -6,60 +6,67 @@
   <meta name="description" content="Інформація про команду та навчальний проєкт." />
   <title>Про нас</title>
   <link rel="icon" href="assets/images/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="page">
 
   <a class="skip-link" href="#main">Перейти до основного контенту</a>
 
-  <header>
-    <h1>Мій перший сайт</h1>
-    <nav aria-label="Головна навігація">
-      <ul>
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="about.html" aria-current="page">Про нас</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
+  <header class="site-header page__header">
+    <h1 class="site-header__title">Мій перший сайт</h1>
+    <nav class="main-nav site-header__nav" aria-label="Головна навігація">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a href="index.html" class="main-nav__link">Головна</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="about.html" class="main-nav__link main-nav__link--active" aria-current="page">Про нас</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="contacts.html" class="main-nav__link">Контакти</a>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <main id="main">
-    <article>
-
-      <header>
-        <h2>Про нашу команду</h2>
-        <p>Ми студенти, які вивчають веб-розробку та створюють навчальні проєкти.</p>
+  <main id="main" class="main page__main">
+    <article class="about main__about">
+      <header class="about__header">
+        <h2 class="about__title">Про нашу команду</h2>
+        <p class="about__intro">
+          Ми студенти, які вивчають веб-розробку та створюють навчальні проєкти.
+        </p>
       </header>
 
-      <section>
-        <h3>Наші навички</h3>
-        <ul>
-          <li>HTML і семантична розмітка</li>
-          <li>CSS та адаптивний дизайн</li>
-          <li>JavaScript і робота з логікою сайту</li>
+      <section class="about__section">
+        <h3 class="about__subtitle">Наші навички</h3>
+        <ul class="about__list">
+          <li class="about__item">HTML і семантична розмітка</li>
+          <li class="about__item">CSS та адаптивний дизайн</li>
+          <li class="about__item">JavaScript і робота з логікою сайту</li>
         </ul>
       </section>
 
-      <section>
-        <h3>Наш досвід</h3>
-        <ol>
-          <li>Верстка простих сайтів</li>
-          <li>Робота з формами</li>
-          <li>Робота з Git та GitHub</li>
+      <section class="about__section">
+        <h3 class="about__subtitle">Наш досвід</h3>
+        <ol class="about__list about__list--ordered">
+          <li class="about__item">Верстка простих сайтів</li>
+          <li class="about__item">Робота з формами</li>
+          <li class="about__item">Робота з Git та GitHub</li>
         </ol>
       </section>
 
-      <section>
-        <h3>Наша мета</h3>
-        <p>
+      <section class="about__section">
+        <h3 class="about__subtitle">Наша мета</h3>
+        <p class="about__text">
           Отримати практичні навички веб-розробки та створити власне портфоліо.
         </p>
       </section>
-
     </article>
   </main>
 
-  <footer>
-    <p>© 2025. Виконав: Твоє ім’я</p>
+  <footer class="site-footer page__footer">
+    <p class="site-footer__text">© 2025. Виконав: Демидьонок Роман Юрійович</p>
   </footer>
 
 </body>

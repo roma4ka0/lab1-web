@@ -4,100 +4,119 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Головна сторінка навчального лендингу: новини, послуги, переваги." />
-  <title>Лабораторна 2 - Головна</title>
+  <title>Лабораторна 3 - Головна</title>
 
   <link rel="icon" href="assets/images/favicon.ico" />
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="page">
   <a class="skip-link" href="#main">Перейти до основного контенту</a>
 
-  <header class="site-header">
-    <h1 class="site-title">Мій перший лендинг</h1>
-    <nav class="main-nav" aria-label="Головна навігація">
-      <ul>
-        <li><a href="index.html" aria-current="page">Головна</a></li>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
+  <header class="site-header page__header">
+    <h1 class="site-header__title">Мій перший лендинг</h1>
+
+    <nav class="main-nav site-header__nav" aria-label="Головна навігація">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a href="index.html" class="main-nav__link main-nav__link--active" aria-current="page">Головна</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="about.html" class="main-nav__link">Про нас</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="contacts.html" class="main-nav__link">Контакти</a>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <main id="main">
+  <main id="main" class="main page__main">
     <!-- 1) Новина про користувача -->
-    <article class="news">
-      <header class="news-header">
-        <h2>Новина про користувача</h2>
-        <p>Короткий опис новини про мене / наш проєкт.</p>
+    <article class="news main__news">
+      <header class="news__header">
+        <h2 class="news__title">Новина про користувача</h2>
+        <p class="news__lead">Короткий опис новини про мене / наш проєкт.</p>
       </header>
 
-      <figure class="news-figure">
-        <img src="assets/images/user-photo.jpg"
-             alt="Фото користувача"
-             width="400" />
-        <figcaption>Моє зображення / зображення проєкту.</figcaption>
+      <figure class="news__figure">
+        <img
+          src="assets/images/image.png"
+          alt="Фото користувача"
+          width="400"
+          class="news__image"
+        >
+        <figcaption class="news__caption">
+          Моє зображення / зображення проєкту.
+        </figcaption>
       </figure>
 
-      <p>
+      <p class="news__text">
         Тут може бути невеликий текст-опис: хто я, чим займаюсь, що це за лендинг і т.д.
       </p>
     </article>
 
     <!-- 2) Секція з перевагами (список) -->
-    <section class="services" aria-labelledby="benefits-title">
-      <h3 id="benefits-title">Наші переваги</h3>
-      <ul>
-        <li>Сучасні технології навчання</li>
-        <li>Досвідчені викладачі</li>
-        <li>Практичні завдання та реальні приклади</li>
+    <section class="services main__services" aria-labelledby="benefits-title">
+      <h3 id="benefits-title" class="services__title">Наші переваги</h3>
+      <ul class="services__list">
+        <li class="services__item">Сучасні технології навчання</li>
+        <li class="services__item">Досвідчені викладачі</li>
+        <li class="services__item">Практичні завдання та реальні приклади</li>
       </ul>
     </section>
 
     <!-- 3) Секція з таблицею -->
-    <section class="prices" aria-labelledby="prices-title">
-      <h3 id="prices-title">Наші послуги та умови</h3>
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Послуга</th>
-            <th scope="col">Опис</th>
-            <th scope="col">Вартість</th>
+    <section class="prices main__prices" aria-labelledby="prices-title">
+      <h3 id="prices-title" class="prices__title">Наші послуги та умови</h3>
+      <table class="prices__table">
+        <thead class="prices__head">
+          <tr class="prices__row">
+            <th scope="col" class="prices__cell prices__cell--head">Послуга</th>
+            <th scope="col" class="prices__cell prices__cell--head">Опис</th>
+            <th scope="col" class="prices__cell prices__cell--head">Вартість</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Курс HTML/CSS</td>
-            <td>Основи верстки та семантична розмітка.</td>
-            <td>Безкоштовно (для студентів групи)</td>
+        <tbody class="prices__body">
+          <tr class="prices__row">
+            <td class="prices__cell">Курс HTML/CSS</td>
+            <td class="prices__cell">Основи верстки та семантична розмітка.</td>
+            <td class="prices__cell">Безкоштовно (для студентів групи)</td>
           </tr>
-          <tr>
-            <td>Консультації</td>
-            <td>Допомога з лабораторними роботами.</td>
-            <td>За домовленістю</td>
+          <tr class="prices__row">
+            <td class="prices__cell">Консультації</td>
+            <td class="prices__cell">Допомога з лабораторними роботами.</td>
+            <td class="prices__cell">За домовленістю</td>
           </tr>
-          <tr>
-            <td>Додаткові матеріали</td>
-            <td>Корисні посилання, статті, відео.</td>
-            <td>Безкоштовно</td>
+          <tr class="prices__row">
+            <td class="prices__cell">Додаткові матеріали</td>
+            <td class="prices__cell">Корисні посилання, статті, відео.</td>
+            <td class="prices__cell">Безкоштовно</td>
           </tr>
         </tbody>
       </table>
     </section>
 
     <!-- 4) Побічна інформація -->
-    <aside class="useful-links">
-      <h3>Корисні посилання</h3>
-      <ul>
-        <li>
-          <a href="https://developer.mozilla.org/uk/docs/Web/HTML"
-             target="_blank"
-             rel="noopener noreferrer">
+    <aside class="useful-links main__sidebar">
+      <h3 class="useful-links__title">Корисні посилання</h3>
+      <ul class="useful-links__list">
+        <li class="useful-links__item">
+          <a
+            href="https://developer.mozilla.org/uk/docs/Web/HTML"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="useful-links__link"
+          >
             Документація HTML (MDN)
           </a>
         </li>
-        <li>
-          <a href="https://validator.w3.org/"
-             target="_blank"
-             rel="noopener noreferrer">
+        <li class="useful-links__item">
+          <a
+            href="https://validator.w3.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="useful-links__link"
+          >
             W3C HTML Validator
           </a>
         </li>
@@ -105,9 +124,9 @@
     </aside>
   </main>
 
-  <footer class="site-footer">
-    <p>© 2025 Група ПІ: гр. 6.1214-с2</p>
-    <p>Виконав(ла): Демидьонок Роман Юрійович</p>
+  <footer class="site-footer page__footer">
+    <p class="site-footer__text">© 2025 Група ПІ: гр. 6.1214-с2</p>
+    <p class="site-footer__text">Виконав: Демидьонок Роман Юрійович</p>
   </footer>
 </body>
 </html>
