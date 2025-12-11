@@ -26,6 +26,13 @@
   --space-4: 16px;
   --space-5: 24px;
   --space-6: 32px;
+
+    /* Fluid типографіка */
+  --fs-body: clamp(0.9rem, 0.85rem + 0.3vw, 1.05rem);
+  --fs-h1: clamp(1.4rem, 1.2rem + 0.7vw, 2rem);
+  --fs-h2: clamp(1.2rem, 1.1rem + 0.5vw, 1.7rem);
+  --fs-h3: clamp(1.05rem, 1rem + 0.3vw, 1.4rem);
+
 }
 
 /* RESET */
@@ -48,6 +55,7 @@ body {
   background: var(--bg-page);
   color: var(--text-main);
   line-height: 1.6;
+  font-size: var(--fs-body);
 }
 
 img {
@@ -71,19 +79,21 @@ ul {
 .layout {
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 100dvh; /* було 100vh */
 
   display: grid;
-  grid-template-columns: 260px 1fr;
-  grid-template-rows: auto 1fr auto;
+  /* базово: одна колонка (мобілка) */
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
   column-gap: var(--space-4);
   row-gap: var(--space-3);
   padding: var(--space-4);
 
   grid-template-areas:
-    "header header"
-    "aside  main"
-    "footer footer";
+    "header"
+    "aside"
+    "main"
+    "footer";
 }
 
 /* Привязка областей */
@@ -140,15 +150,21 @@ ul {
 
 /* Адаптив: на узких экранах — одна колонка */
 
-@media (max-width: 900px) {
+@media (min-width: 640px) {
   .layout {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
-      "header"
-      "aside"
-      "main"
-      "footer";
+      "header header"
+      "aside  main"
+      "footer footer";
+  }
+}
+
+/* 2-й брейкпоінт: з 1024px – ширший aside 280px */
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 280px 1fr;
   }
 }
 
@@ -157,9 +173,22 @@ ul {
    =========================== */
 
 .site-header__title {
-  font-size: 1.4rem;
+  font-size: var(--fs-h1);
   font-weight: 700;
   color: var(--brand);
+}
+
+.news__title,
+.about__title,
+.contacts__title {
+  font-size: var(--fs-h2);
+}
+
+.services__title,
+.prices__title,
+.about__subtitle,
+.contacts__subtitle {
+  font-size: var(--fs-h3);
 }
 
 .nav {
@@ -488,4 +517,43 @@ ul {
 
 .site-footer__text {
   /* сами абзацы в footer, общие стили уже выше */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-page: #020617;
+    --bg-block: #020617;
+
+    --brand: #60a5fa;
+    --brand-soft: #1d4ed8;
+    --brand-accent: #3b82f6;
+
+    --text-main: #e5e7eb;
+    --text-muted: #9ca3af;
+
+    --border: #1f2937;
+  }
+
+  body {
+    background: var(--bg-page);
+    color: var(--text-main);
+  }
+
+  .header,
+  .aside,
+  .main,
+  .footer {
+    background: var(--bg-block);
+  }
+
+  /* світлі фони всередині блоків підкрутимо трохи темнішими */
+  .news__figure,
+  .services__item,
+  .prices__table tbody tr:nth-child(even) {
+    background: #020617;
+  }
+
+  .prices__table thead {
+    background: var(--brand-accent);
+  }
 }
