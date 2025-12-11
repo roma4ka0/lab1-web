@@ -1,0 +1,45 @@
+.news {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .news {
+    grid-template-columns: 1fr;
+  }
+}
+
+.news__header {
+  margin-bottom: var(--space-2);
+}
+
+.news__lead {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.news__figure {
+  border-radius: var(--radius-2);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+  background: var(--bg-block); // ← исправлено
+}
+
+.news__image {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+.news__caption {
+  font-size: 0.85rem;
+  padding: var(--space-2) var(--space-3);
+  color: var(--text-muted);
+}
+
+.news__text {
+  margin-top: var(--space-3);
+  font-size: 0.95rem;
+}

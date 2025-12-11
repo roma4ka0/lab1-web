@@ -1,0 +1,15 @@
+@use './abstracts/variables';
+
+@use './base/reset';
+@use './base/typography';
+
+@use './layout/layout';
+
+@use './components/header';
+@use './components/aside';
+@use './components/news';
+@use './components/services';
+@use './components/prices';
+@use './components/about';
+@use './components/contacts';
+@use './components/footer';

@@ -1,0 +1,29 @@
+.prices__title {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-2);
+}
+
+.prices__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  overflow: hidden;
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-1);
+}
+
+.prices__table thead {
+  background: var(--brand);
+  color: #ffffff;
+}
+
+.prices__table th,
+.prices__table td {
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.prices__table tbody tr {
+  background: var(--bg-block);
+}

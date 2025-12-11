@@ -1,0 +1,27 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Arial, sans-serif;
+  background: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.6;
+  font-size: var(--fs-body);
+}
+
+.site-header__title {
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.news__title,
+.about__title,
+.contacts__title {
+  font-size: var(--fs-h2);
+}
+
+.services__title,
+.prices__title,
+.about__subtitle,
+.contacts__subtitle {
+  font-size: var(--fs-h3);
+}

@@ -1,0 +1,28 @@
+.aside__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--brand);
+  margin-bottom: var(--space-2);
+}
+
+.aside__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.aside__link {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding: 4px 0;
+  border-radius: var(--radius-1);
+}
+
+.aside__link:hover {
+  color: var(--brand-accent);
+}
+
+.aside__link--current {
+  font-weight: 600;
+  color: var(--brand-accent);
+}
