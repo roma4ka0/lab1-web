@@ -26,3 +26,13 @@
   font-weight: 600;
   color: var(--brand-accent);
 }
+
+.aside {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.aside a {
+  color: #2563eb;
+}

@@ -2,7 +2,7 @@
 <html lang="uk">
   {{> head }}
 
-<body>
+<body data-page="{{pageCode}}">
 
 <div class="layout">
 
@@ -46,6 +46,17 @@
       </section>
     </article>
 
+    <template id="employee-card-tpl">
+      <li class="card">
+        <img class="employee-card__photo" />
+        <h4 class="employee-card__name"></h4>
+        <p class="employee-card__role"></p>
+        <a class="employee-card__cta" target="_blank">Profile</a>
+      </li>
+    </template>
+
+    <ul class="team__list"></ul>
+    
   </main>
 
   {{> footer }}

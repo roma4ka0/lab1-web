@@ -16,3 +16,13 @@
   border: 1px solid var(--border);
   font-size: 0.95rem;
 }
+
+.services {
+  background-color: var(--bg-surface);
+}
+
+.services__item {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}

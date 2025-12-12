@@ -48,3 +48,31 @@
     --border: #1f2937;
   }
 }
+
+/* =========================
+   THEME VARIABLES
+   ========================= */
+
+/* LIGHT */
+:root {
+  --bg-page: #f1f5f9;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+
+  --text-main: #020617;
+  --text-muted: #475569;
+
+  --border-color: #e2e8f0;
+}
+
+/* DARK */
+html.dark {
+  --bg-page: #020617;
+  --bg-surface: #020617;
+  --bg-card: #020617;
+
+  --text-main: #e5e7eb;
+  --text-muted: #94a3b8;
+
+  --border-color: #1e293b;
+}

@@ -27,3 +27,46 @@
 .prices__table tbody tr {
   background: var(--bg-block);
 }
+
+.prices__table {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+.prices__table th {
+  background-color: #60a5fa; /* аккуратный синий */
+  color: white;
+}
+
+.prices__table td {
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+
+.prices {
+  background-color: var(--bg-surface);
+}
+
+.prices__table {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+.prices__table th {
+  background-color: #60a5fa;
+  color: #ffffff;
+}
+
+.prices__table td {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+
+.prices {
+  background-color: var(--bg-surface);
+}
+
+.prices__title {
+  color: var(--text-main);
+}

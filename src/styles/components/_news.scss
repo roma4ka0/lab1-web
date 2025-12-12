@@ -5,6 +5,11 @@
   align-items: flex-start;
 }
 
+.news {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+}
+
 @media (max-width: 900px) {
   .news {
     grid-template-columns: 1fr;
@@ -37,9 +42,20 @@
   font-size: 0.85rem;
   padding: var(--space-2) var(--space-3);
   color: var(--text-muted);
+  background-color: var(--bg-surface);
+  color: var(--text-muted);
 }
 
 .news__text {
   margin-top: var(--space-3);
   font-size: 0.95rem;
+}
+
+.news {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+}
+
+.news p {
+  color: var(--text-muted);
 }

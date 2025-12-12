@@ -1,3 +1,9 @@
 .site-footer__text {
   /* Базовые стили уже есть в layout */
 }
+
+.footer {
+  background-color: var(--bg-surface);
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+}

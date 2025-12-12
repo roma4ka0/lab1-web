@@ -22,6 +22,11 @@ export default defineConfig({
           isIndex: pagePath.includes("index"),
           isAbout: pagePath.includes("about"),
           isContacts: pagePath.includes("contacts"),
+
+          pageCode:
+          pagePath.includes("about") ? "about" :
+          pagePath.includes("index") ? "main" :
+          "contacts",
         };
       },
     }),

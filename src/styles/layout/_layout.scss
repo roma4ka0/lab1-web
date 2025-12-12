@@ -57,6 +57,15 @@
   color: var(--text-muted);
 }
 
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+}
+
+.layout {
+  background-color: var(--bg-page);
+}
+
 /* Responsive */
 @media (min-width: 640px) {
   .layout {
@@ -74,4 +83,18 @@
   .layout {
     grid-template-columns: 280px 1fr;
   }
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+}
+
+.layout {
+  background-color: var(--bg-page);
+}
+
+.main {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
 }
