@@ -12,26 +12,39 @@
 
   <main class="main">
 
-    <article class="news">
+    <!-- NEWS -->
+    <article class="news card">
       <header class="news__header">
-        <h2 class="news__title">Новина про користувача</h2>
-        <p class="news__lead">Короткий опис новини про мене / наш проєкт.</p>
+        <h2 class="news__title text-xl font-semibold">
+          Новина про користувача
+        </h2>
+        <p class="news__lead mb-4">
+          Короткий опис новини про мене / наш проєкт.
+        </p>
       </header>
 
       <figure class="news__figure">
-        <img src="/images/image.png"
-             alt="Фото користувача"
-             class="news__image">
-        <figcaption class="news__caption">Моє зображення / зображення проєкту.</figcaption>
+        <img
+          src="/images/image.png"
+          alt="Фото користувача"
+          class="news__image"
+        >
+        <figcaption class="news__caption">
+          Моє зображення / зображення проєкту.
+        </figcaption>
       </figure>
 
       <p class="news__text">
-        Тут може бути невеликий текст-опис: хто я, чим займаюсь, що це за лендинг і т.д.
+        Тут може бути невеликий текст-опис: хто я, чим займаюсь,
+        що це за лендинг і т.д.
       </p>
     </article>
 
-    <section class="services">
-      <h3 class="services__title">Наші переваги</h3>
+    <!-- SERVICES -->
+    <section class="services mt-8">
+      <h3 class="services__title text-lg font-bold mb-3">
+        Наші переваги
+      </h3>
       <ul class="services__list">
         <li class="services__item">Сучасні технології навчання</li>
         <li class="services__item">Досвідчені викладачі</li>
@@ -39,9 +52,10 @@
       </ul>
     </section>
 
+    <!-- PRICES -->
     <section class="prices">
       <h3 class="prices__title">Наші послуги та умови</h3>
-      <table class="prices__table">
+      <table class="prices__table border border-slate-300">
         <thead>
           <tr>
             <th>Послуга</th>

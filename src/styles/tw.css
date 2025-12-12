@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* =========================
+   THEME (обязательно static)
+   ========================= */
+@theme static {
+  --color-brand-100: #e6f0ff;
+  --color-brand-500: #003366;
+  --color-brand-600: #002244;
+}
+
+/* =========================
+   DARK MODE VARIANT
+   ========================= */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* =========================
+   BASE (Preflight fix)
+   ========================= */
+@layer base {
+  body {
+    color: #111827; /* slate-900 */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #020617; /* slate-950 */
+  }
+}
+
+/* =========================
+   COMPONENTS (@apply)
+   ========================= */
+@layer components {
+  .card {
+    @apply rounded-xl;
+  }
+
+  .btn-brand {
+    @apply inline-flex items-center justify-center
+           rounded-md px-4 py-2
+           bg-blue-600 text-white
+           hover:bg-blue-700 transition;
+  }
+}

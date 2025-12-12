@@ -1,12 +1,14 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import handlebars from "vite-plugin-handlebars";
+import tailwind from "@tailwindcss/vite";
 
 export default defineConfig({
   root: ".",
   publicDir: "public",
 
   plugins: [
+    tailwind(), // ← ВАЖНО: Tailwind должен быть ПЕРВЫМ
     handlebars({
       partialDirectory: resolve(__dirname, "src/partials"),
       context(pagePath) {

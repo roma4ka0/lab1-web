@@ -27,6 +27,10 @@
   --fs-h1: clamp(1.4rem, 1.2rem + 0.7vw, 2rem);
   --fs-h2: clamp(1.2rem, 1.1rem + 0.5vw, 1.7rem);
   --fs-h3: clamp(1.05rem, 1rem + 0.3vw, 1.4rem);
+
+  --brand: var(--color-brand-500);
+  --brand-dark: var(--color-brand-600);
+  --brand-light: var(--color-brand-100);
 }
 
 @media (prefers-color-scheme: dark) {
